@@ -14,7 +14,7 @@ def HomeView(request):
         elif 'user' in request.POST:
             return render(request, "user.html")
         
-    return render(request, "home.html")
+    return render(request, "index.html")
 
 
 
@@ -51,7 +51,7 @@ def RoomView(request, room_name, username):
 
         return render(request, "room.html", context)
     except Exception as e:
-        return render(request, "error.html", {"error_message": str(e)})
+        return render(request, "index.html", {"error_message": str(e)})
 
 
 
