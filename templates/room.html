@@ -162,7 +162,7 @@
         {% for message in messages %}
         <div class="single-message {% if message.sender == user %}sent{% endif %}">
           <div class="msg-body">{{ message.message }}</div>
-          <p class="sender">{{ message.sender }}</p>
+          <p class="sender">{% if message.sender == user %}You{% else %}{{ message.sender }}{% endif %}</p>
           
         </div>
         {% endfor %}
